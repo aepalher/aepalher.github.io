@@ -3,49 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web con Botones</title>
+    <title>Inicio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
         }
-        /* Estilo para el encabezado y los botones */
         header {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        .nav-buttons {
-            display: inline-block;
-        }
-        .nav-buttons button {
-            background-color: #555;
-            color: white;
-            padding: 10px 20px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .nav-buttons button:hover {
-            background-color: #777;
-        }
-        /* Estilo para el contenido principal */
-        main {
+            background: #333;
+            color: #fff;
             padding: 20px;
-            text-align: center;
+            border-bottom: #ccc 3px solid;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        main {
+            padding: 50px;
+        }
+        main h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        main p {
+            font-size: 18px;
+            color: #555;
         }
     </style>
 </head>
 <body>
-
-    <!-- Encabezado con botones -->
     <header>
-        <div class="nav-buttons">
-            <button onclick="window.location.href='https://aepalher.github.io/projects/'">PROYECTOS</button>
-            <button onclick="window.location.href='/projects/UNI.html'">UNI</button>
-            <button onclick="window.location.href='/aboutme/aepalher.html'">Botón 3</button>
+        <h1>Bienvenido a mi Página Web</h1>
+        <div class="button-container">
+            <button class="button" onclick="window.location.href='/projects/UNI.html'">UNI</button>
+            <button class="button" onclick="window.location.href='/aboutme/aepalher.html'">Botón 3</button>
         </div>
     </header>
 
@@ -54,6 +67,5 @@
         <h1>Bienvenido a mi Página Web</h1>
         <p>Este es el cuerpo de la página. Puedes personalizarlo con el contenido que desees.</p>
     </main>
-
 </body>
 </html>
