@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Mi Página Web con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilo para el encabezado y los botones */
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav-buttons {
+            display: inline-block;
+        }
+        .nav-buttons button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .nav-buttons button:hover {
+            background-color: #777;
+        }
+        /* Estilo para el contenido principal */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a mi web en GitHub Pages</h1>
-    <p>Este es un sitio web de ejemplo alojado en GitHub Pages.</p>
+
+    <!-- Encabezado con botones -->
+    <header>
+        <div class="nav-buttons">
+            <button onclick="alert('Botón 1 presionado')">Botón 1</button>
+            <button onclick="alert('Botón 2 presionado')">Botón 2</button>
+            <button onclick="alert('Botón 3 presionado')">Botón 3</button>
+        </div>
+    </header>
+
+    <!-- Cuerpo de la página -->
+    <main>
+        <h1>Bienvenido a mi Página Web</h1>
+        <p>Este es el cuerpo de la página. Puedes personalizarlo con el contenido que desees.</p>
+    </main>
+
 </body>
 </html>
