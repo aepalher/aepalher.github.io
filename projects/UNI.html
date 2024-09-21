@@ -5,17 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Proyectos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reseteo de márgenes y paddings */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Asegura que el body ocupe el 100% de la pantalla */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Asegura que el body tenga una altura mínima igual a la altura de la ventana */
+            font-family: Arial, sans-serif;
+            margin: 0;
             background-color: #f4f4f4;
         }
+
         .container {
+            flex: 1; /* Permite que este div crezca y ocupe el espacio disponible */
             width: 80%;
             margin: auto;
             overflow: hidden;
         }
+
         header {
             background: #333;
             color: #fff;
@@ -24,10 +40,12 @@
             border-bottom: #ccc 3px solid;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
             font-size: 24px;
         }
+
         .project {
             background: #fff;
             margin: 20px 0;
@@ -35,22 +53,24 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .project h2 {
             color: #333;
             font-size: 20px;
         }
+
         .project p {
             line-height: 1.6;
             color: #555;
         }
+
         footer {
             background: #333;
             color: #fff;
             text-align: center;
             padding: 10px;
-            position: absolute;
             width: 100%;
-            bottom: 0;
+            /* Elimina la posición absoluta para evitar problemas de superposición */
         }
     </style>
 </head>
@@ -62,7 +82,6 @@
     </header>
 
     <div class="container">
-        
         <div class="project">
             <h2>Proyecto 1: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
@@ -74,33 +93,32 @@
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
-        
+
         <div class="project">
-            <h2>Proyecto 2: [Nombre del Proyecto]</h2>
+            <h2>Proyecto 3: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
-        
+
         <div class="project">
-            <h2>Proyecto 2: [Nombre del Proyecto]</h2>
+            <h2>Proyecto 4: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
-        
+
         <div class="project">
-            <h2>Proyecto 2: [Nombre del Proyecto]</h2>
+            <h2>Proyecto 5: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
-        
+
         <div class="project">
-            <h2>Proyecto 2: [Nombre del Proyecto]</h2>
+            <h2>Proyecto 6: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
 
         <!-- Agrega más proyectos aquí -->
-
     </div>
 
     <footer>
@@ -108,7 +126,7 @@
     </footer>
     
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
