@@ -55,75 +55,44 @@
             line-height: 1.6;
             color: #555;
         }
-        footer {
-            |;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            width: 100%;
-            /* Elimina la posición absoluta para evitar problemas de superposición */
-        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Mis Proyectos</h1>
-        </div>
-    </header>
+    <!-- Div donde se cargará el header -->
+    <div id="header"></div>
+
     <div class="container">
         <div class="project">
             <h2>Proyecto 1: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
-        <div class="project1">
+        <!-- Más proyectos aquí -->
+        <div class="project">
             <h2>Proyecto 2: [Nombre del Proyecto]</h2>
             <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
-        <div class="project2">
-            <h2>Proyecto 3: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <div class="project3">
-            <h2>Proyecto 4: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <div class="project4">
-            <h2>Proyecto 5: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <div class="project5">
-            <h2>Proyecto 6: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <div class="project6">
-            <h2>Proyecto 7: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <div class="project7">
-            <h2>Proyecto 8: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <div class="project8">
-            <h2>Proyecto 9: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <!-- Agrega más proyectos aquí -->
+        <!-- Más proyectos aquí -->
     </div>
-    <footer>
-        <p>&copy; <span id="year"></span> Andrés Palomino. Todos los derechos reservados.</p>
-    </footer>
+
+    <!-- Div donde se cargará el footer -->
+    <div id="footer"></div>
+
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+        // Cargar el header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // Cargar el footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
     </script>
 </body>
 </html>
