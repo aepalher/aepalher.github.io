@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Palomino | Electronic Eng.</title>
+    <title>Andrés Palomino</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,34 +11,6 @@
             padding: 0;
             background-color: #f4f4f4;
             text-align: center;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            border-bottom: #ccc 3px solid;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .button-container {
-            margin-top: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 25px;
-            margin: 10px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #333;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #555;
         }
         main {
             padding: 50px;
@@ -54,23 +26,24 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a mi Página Web</h1>
-        <div class="button-container">
-            <button class="button" onclick="window.location.href='/projects/UNI.html'">UNI</button>
-            <button class="button" onclick="window.location.href='/aboutme/aepalher.html'">Botón 3</button>
-        </div>
-    </header>
+    <div id="header"></div>
     <!-- Cuerpo de la página -->
     <main>
         <h1>Bienvenido! Soy Andrés Palomino!</h1>
         <p>Ingeniero electrónico</p>
     </main>
-    
+
     <div id="footer"></div>
     
     <script>
-        fetch('/footer.html')
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Una vez que el header está cargado, podemos cambiar el título
+                document.getElementById('header-title').textContent = "Bienvenido!";
+            });
+        fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
