@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Palomino</title>
+    <title>👨‍💻 Andrés Palomino </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,16 +26,21 @@
     </style>
 </head>
 <body>
+    <!-- Cabecera web -->
     <div id="header"></div>
+
     <!-- Cuerpo de la página -->
     <main>
         <h1>Bienvenido! Soy Andrés Palomino!</h1>
         <p>Ingeniero electrónico</p>
     </main>
 
+    <!-- Footer web -->
     <div id="footer"></div>
-    
+
+    <!-- Llamado de estructuras -->
     <script>
+        // Cargar el header desde la raíz
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
@@ -43,12 +48,12 @@
                 // Una vez que el header está cargado, podemos cambiar el título
                 document.getElementById('header-title').textContent = "Bienvenido!";
             });
+        // Cargar el footer desde la raíz
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer').innerHTML = data;
             });
     </script>
-
 </body>
 </html>

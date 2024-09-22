@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-Proyectos-</title>
+    <title>Proyectos</title>
     <style>
         /* Reseteo de márgenes y paddings */
         * {
@@ -79,8 +79,9 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
+                // Una vez que el header está cargado, podemos cambiar el título
+                document.getElementById('header-title').textContent = "Menú de proyectos";
             });
-
         // Cargar el footer desde la raíz
         fetch('../footer.html')
             .then(response => response.text())
