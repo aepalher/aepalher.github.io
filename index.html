@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a mi WEB!</title>
+    <title>Andrés Palomino | Electronic Eng.</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,5 +66,15 @@
         <h1>Bienvenido a mi Página Web</h1>
         <p>Este es el cuerpo de la página. Puedes personalizarlo con el contenido que desees.</p>
     </main>
+    <div id="footer"></div>
+    
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+
 </body>
 </html>

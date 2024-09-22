@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Proyectos</title>
+    <title>* Proyectos *</title>
     <style>
         /* Reseteo de márgenes y paddings */
         * {
@@ -68,26 +68,20 @@
             <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
         </div>
         <!-- Más proyectos aquí -->
-        <div class="project">
-            <h2>Proyecto 2: [Nombre del Proyecto]</h2>
-            <p><strong>Descripción:</strong> Breve descripción del proyecto, qué hace, qué tecnologías se utilizaron, etc.</p>
-            <p><strong>Enlace:</strong> <a href="[Enlace al Proyecto]" target="_blank">Ver Proyecto</a></p>
-        </div>
-        <!-- Más proyectos aquí -->
     </div>
 
     <!-- Div donde se cargará el footer -->
     <div id="footer"></div>
 
     <script>
-        // Cargar el header
+        // Cargar el header desde la raíz
         fetch('../header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
             });
 
-        // Cargar el footer
+        // Cargar el footer desde la raíz
         fetch('../footer.html')
             .then(response => response.text())
             .then(data => {
